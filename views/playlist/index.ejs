@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <header>
+        <% if (username) { %>
+          Welcome, <%= username %>.<a href="/user/logout"> Log out </a>
+      <%  } %>
+      </header>
+      <% for (let i = 0; i < playlist.length; i++) { %>
+      <a href="/playlist/<%= playlist[i].id %>/"><img src="<%= playlist[i].url %>" height="200" width="200"/></a>
+    <% } %>
+
+    <form action="/playlist" method="post">
+      Url: <input name="url" /><br/>
+      Submitted by: <input name="submitted_by" />
+
+      <button type="submit">Submit</button>
+    </form>
+    
+  </body>
+</html>
