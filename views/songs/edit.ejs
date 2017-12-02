@@ -10,8 +10,18 @@
               <form action="/songs/<%=song.id%>?_method=PUT" method="POST">
                 <label for="artist">Artist: </label>
                 <input type="text" name="artist" value="<%=song.artist%>">
+
                 <label for="song">Song: </label>
                 <input type="text" name="song" value="<%=song.song%>">
+
+                <label for="length">Length: </label>
+                <input type="text" name="length" value="<%=song.length%>">
+
+                <label for="written_by">Writer: </label>
+                <input type="text" name="written_by" value="<%=song.written_by%>">
+
+                <label for="lyrics">Lyrics: </label>
+                <input type="text" name="lyrics" value="<%=song.lyrics%>">
 
                 <input type="submit" name="submit" value="submit">
               </form>

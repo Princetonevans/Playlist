@@ -35,6 +35,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+app.use(express.static('public'));
 // controllers
 const playlistController = require('./controllers/playlist.js');
 const songsController = require('./controllers/songs.js');

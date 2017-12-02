@@ -14,6 +14,9 @@
 
     <p>Artist: <%= oneSong.artist %> </p>
     <p>Song: <%= oneSong.song %> </p>
+    <p>Length: <%= oneSong.length %> </p>
+    <p>Writer: <%= oneSong.written_by %> </p>
+    <p>Writer: <%= oneSong.lyrics %> </p>
 
     <% for (let playlist of playlists) { %>
       <p><strong><%= playlist.url %></strong> - <%= playlist.submitted_by %></p>

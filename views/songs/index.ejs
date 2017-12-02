@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
       <header>
@@ -11,8 +12,12 @@
       <%  } %>
       </header>
 
+
+
       <% for (let i = 0; i < song.length; i++) { %>
+        <div class="song">
       <a href="/songs/<%= song[i].id %>/"><%= song[i].artist %>-<%= song[i].song%></a>
+      </div>
     <% } %>
 
     <form action="/songs" method="post">
