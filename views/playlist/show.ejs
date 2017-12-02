@@ -6,24 +6,26 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+  </form>
+  <a href="/playlist/<%=onePlaylist.id%>/edit"><button type="button" name="button" class="edit-button">Edit Playlist</button></a>
+  <form action="/playlist/<%=onePlaylist._id%>?_method=DELETE" method="POST">
+          <button class="delete-button">Delete Playlist</button>
+        </form>
     <img src='<%= onePlaylist.url %>' />
+    <p>Submitted by: <%= onePlaylist.submitted_by %> </p>
 
     <% for (let song of songs) { %>
       <p><strong><%= song.artist %></strong> - <%= song.song %></p>
     <% } %>
 
-    <h3>Add a song!</h3>
+    <h5>Add a song!</h5>
 
     <form action='/songs' method='post'>
       <input type='text' name='artist' placeholder='Artist' />
       <input type='text' name='song' placeholder='Song' />
       <input type='hidden' name='playlist' value='<%= onePlaylist._id %>' />
-      <input type='submit' />
-    </form>
-    <a href="/playlist/<%=onePlaylist.id%>/edit"><button type="button" name="button" class="edit-button">Edit</button></a>
-    <form action="/playlist/<%=onePlaylist._id%>?_method=DELETE" method="POST">
-            <button class="delete-button">DELETE</button>
-          </form>
+      <button type='submit'>Add Song</button>
+
       <a href="/playlist">Back</a>
   </body>
 </html>

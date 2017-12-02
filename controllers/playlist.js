@@ -22,9 +22,11 @@ router.get('/', async (req, res) => {
 }
 });
 
+//NEW ROUTE=========================================
 router.get('/new', ( req , res ) => {
   res.render ( 'playlist/new.ejs' );
 });
+
 // SHOW ROUTE================================================
 router.get('/:id', async (req, res) => {
   const onePlaylist = await Playlist.findById(req.params.id);
@@ -47,7 +49,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Edit   : GET    '/playlist/:id/edit' 5/7
+// EDIT ROUTE================================
 router.get ( '/:id/edit' , ( req , res ) => {
   Playlist.findById( req.params.id , ( err , playlist ) => {
         if ( err ) { console.log ( err ); }
@@ -56,13 +58,14 @@ router.get ( '/:id/edit' , ( req , res ) => {
   });
 });
 
-// Update : PUT    '/playlist/:id'
+// UPDATE ROUTE=================================
 router.put( '/:id' , ( req , res ) => {
   Playlist.findByIdAndUpdate( req.params.id, req.body , { new : true }, ( err , playlist ) => {
     if ( err ) { console.log( err ); }
     res.redirect ( '/playlist/' + playlist.id );
   });
 });
+
 //Delete Route ======================================
 router.delete (  '/:id' , ( req , res ) => {
   Playlist.findByIdAndRemove( req.params.id , ( err , playlist ) => {
@@ -70,4 +73,5 @@ router.delete (  '/:id' , ( req , res ) => {
     res.redirect ( '/playlist' );
   });
 });
+
 module.exports = router;
