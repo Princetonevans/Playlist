@@ -22,7 +22,18 @@ router.get('/', async (req, res) => {
 }
 });
 
+// SHOW ROUTE================================================
+router.get('/:id', async (req, res) => {
+  const oneSong = await Song.findById(req.params.id);
+  const playlists = await Playlist.find({ song: oneSong._id });
 
+  res.render('songs/show.ejs', {
+    oneSong: oneSong,
+    playlists: playlists
+ });
+});
+
+//CREATE ROUTE================================
 router.post('/', async (req, res) => {
   console.log('body data: ', req.body);
   try {

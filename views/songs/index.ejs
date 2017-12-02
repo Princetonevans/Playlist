@@ -10,8 +10,9 @@
           Welcome, <%= username %>.<a href="/user/logout"> Log out </a>
       <%  } %>
       </header>
+
       <% for (let i = 0; i < song.length; i++) { %>
-      <a href="/songs/<%= song[i].id %>/"><%= song[i].artist %></a>
+      <a href="/songs/<%= song[i].id %>/"><%= song[i].artist %>-<%= song[i].song%></a>
     <% } %>
 
     <form action="/songs" method="post">
