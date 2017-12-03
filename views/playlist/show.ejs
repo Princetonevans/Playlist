@@ -17,7 +17,7 @@
     <p>Submitted by: <%= onePlaylist.submitted_by %> </p>
 
     <% for (let song of songs) { %>
-      <p><strong><%= song.artist %></strong> - <%= song.song %></p>
+      <p><a href="/songs/<%=song.id%>"><strong><%= song.artist %></strong> - <%= song.song %></a></p>
     <% } %>
 
     <h5>Add a song!</h5>

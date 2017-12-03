@@ -12,20 +12,62 @@
       <%= message %>
   <%  } %>
 
-      <form action="/user/login" method="post">
-        <div class="jumbotron">
-        Username: <input name="username" /> <br />
-        Password: <input name="password" /><br />
 
-        <button class="btn btn-primary" type="submit">Submit</button>
-      </form>
 
-      <h2>Register</h2>
-      <form action="/user/register" method="post">
-        Username: <input name="username" /> <br />
-        Password: <input name="password" /><br />
-        <button class="btn btn-primary" type="submit">Register</button>
+  <form class="form-row align-items-center" action="/user/login" method="post">
+    <div class="jumbotron">
+      <h2>Sign In</h2>
+    <div class="form-row align-items-center">
+      <div class="col-sm-2">
+        <label class="sr-only" for="inlineFormInputName">Username</label>
+        <input name="username" type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Username">
       </div>
+      <div class="form-row align-items-center">
+        <div class="col-sm-2">
+          <label class="sr-only" for="inlineFormInputName">Password</label>
+          <input name="password" type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Password">
+        </div>
+
+      <div class="col-auto">
+        <div class="form-check mb-2 mb-sm-0">
+        </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </div>
+    </div>
+  </form>
+
+
+
+
+
+
+      <form class="form-row align-items-center" action="/user/register" method="post">
+        <h2>Register</h2>
+
+        <div class="form-row align-items-center">
+          <div class="col-sm-2">
+            <label class="sr-only" for="inlineFormInputName">Username</label>
+            <input name="username" type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Username">
+          </div>
+          <div class="form-row align-items-center">
+            <div class="col-sm-2">
+              <label class="sr-only" for="inlineFormInputName">Password</label>
+              <input name="password" type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Password">
+            </div>
+
+          <div class="col-auto">
+            <div class="form-check mb-2 mb-sm-0">
+            </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+
       </form>
+
   </body>
 </html>
