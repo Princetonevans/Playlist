@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
 
@@ -11,17 +13,19 @@
   <%  } %>
 
       <form action="/user/login" method="post">
+        <div class="jumbotron">
         Username: <input name="username" /> <br />
         Password: <input name="password" /><br />
 
-        <button type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
       </form>
 
       <h2>Register</h2>
       <form action="/user/register" method="post">
         Username: <input name="username" /> <br />
         Password: <input name="password" /><br />
-        <button type="submit">Register</button>
+        <button class="btn btn-primary" type="submit">Register</button>
+      </div>
       </form>
   </body>
 </html>
