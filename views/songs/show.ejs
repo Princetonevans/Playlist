@@ -3,33 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
   </form>
   <a href="/songs/<%=oneSong.id%>/edit"><button type="button" name="button" class="edit-button">Edit Song</button></a>
-  <form action="/playlist/<%=oneSong._id%>?_method=DELETE" method="POST">
-          <button class="delete-button">Delete Playlist</button>
+  <form action="/songs/<%=oneSong._id%>?_method=DELETE" method="POST">
+          <button class="delete-button">Delete Song</button>
         </form>
 
     <p>Artist: <%= oneSong.artist %> </p>
     <p>Song: <%= oneSong.song %> </p>
     <p>Length: <%= oneSong.length %> </p>
     <p>Writer: <%= oneSong.written_by %> </p>
-    <p>Writer: <%= oneSong.lyrics %> </p>
+    <p>Lyrics: <%= oneSong.lyrics %> </p>
 
-    <% for (let playlist of playlists) { %>
-      <p><strong><%= playlist.url %></strong> - <%= playlist.submitted_by %></p>
-    <% } %>
-
-    <h5>Add a playlist!</h5>
-
-    <form action='/songs' method='post'>
-      <input type='text' name='artist' placeholder='Artist' />
-      <input type='text' name='song' placeholder='Song' />
-      <input type='hidden' name='playlist' value='<%= oneSong._id %>' />
-      <button type='submit'>Add Song</button>
-
-      <a href="/playlist">Back</a>
+      <a href="/songs"><button tyoe="button" name="button">Back</a></button>
   </body>
 </html>

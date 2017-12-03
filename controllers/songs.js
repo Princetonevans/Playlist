@@ -38,9 +38,11 @@ router.post('/', async (req, res) => {
   console.log('body data: ', req.body);
   try {
     const createdSong = await Song.create(req.body);
+
     res.redirect('/playlist/' + createdSong.playlist);
   } catch (err) {
     res.send(err.message);
+
   }
 });
 
@@ -58,6 +60,13 @@ router.put( '/:id' , ( req , res ) => {
   Song.findByIdAndUpdate( req.params.id, req.body , { new : true }, ( err , song ) => {
     if ( err ) { console.log( err ); }
     res.redirect ( '/songs/' + song.id );
+  });
+});
+//Delete Route ======================================
+router.delete (  '/:id' , ( req , res ) => {
+  Song.findByIdAndRemove( req.params.id , ( err , song ) => {
+    if ( err ) { console.log( err ); }
+    res.redirect ( '/songs' );
   });
 });
 

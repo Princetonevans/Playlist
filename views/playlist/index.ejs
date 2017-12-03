@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   </head>
   <body>
       <header>
@@ -11,8 +13,19 @@
           Welcome, <%= username %>.<a href="/user/logout"> Log out </a>
       <%  } %>
       </header>
+      <nav>
+    <ul class="nav nav-tabs">
+
+      <li><a href="/playlist">HOME</a></li>
+      <li><a href="/songs">SONGS</a></li>
+
+    </ul>
+  </nav>
+
+
+
       <% for (let i = 0; i < playlist.length; i++) { %>
-      <a href="/playlist/<%= playlist[i].id %>/"><img src="<%= playlist[i].url %>" height="200" width="200"/></a>
+      <a href="/playlist/<%= playlist[i].id %>/"><img class="img-responsive center-inline" src="<%= playlist[i].url %>" height="200" width="200"/></a>
     <% } %>
 
     <form action="/playlist" method="post">
@@ -21,6 +34,6 @@
 
       <button type="submit">Submit</button>
     </form>
-    <a href="/songs">All songs</a>
+
   </body>
 </html>

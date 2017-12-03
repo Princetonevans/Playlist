@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
@@ -11,13 +14,38 @@
           Welcome, <%= username %>.<a href="/user/logout"> Log out </a>
       <%  } %>
       </header>
-
-
+<nav>
+  <ul class="nav nav-tabs">
+      <li><a href="/playlist">Playlist</a></li>
+</ul>
+</nav>
 
       <% for (let i = 0; i < song.length; i++) { %>
-        <div class="song">
-      <a href="/songs/<%= song[i].id %>/"><%= song[i].artist %>-<%= song[i].song%></a>
+        <div class="media">
+      <a href="/songs/<%= song[i].id %>/">
+      <table class="table table-striped">
+      <thead>
+      <tr>
+
+      <th>Artist</th>
+
+       <th>Song</th>
+
+       <th>Length</th>
+
+       <th>Writer</a></th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+       <td><%= song[i].artist %></td>
+       <td><%= song[i].song %></td>
+       <td><%= song[i].length %></td>
+
+       </tbody>
+       </table>
       </div>
+
     <% } %>
 
     <form action="/songs" method="post">
@@ -26,6 +54,6 @@
 
       <button type="submit">Submit</button>
     </form>
-    <a href="/playlist">Back</a>
+
   </body>
 </html>
