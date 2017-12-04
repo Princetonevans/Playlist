@@ -12,3 +12,18 @@ h1 {
   text-align: center;
 
 }*/
+.lyrics {
+  width: 600px;
+  /*text-align: center;*/
+  margin: auto;
+}
+/*.media {
+  margin-left: 300px;
+
+}*/
+.head {
+  display:inline-block;
+  margin: auto;
+  padding: 5px;
+  text-align: justify;
+}

@@ -6,6 +6,8 @@ const songSchema = mongoose.Schema({
   length: String,
   written_by: String,
   lyrics: String,
+  producer: String,
+  album: String,
   playlist: { type: mongoose.Schema.Types.ObjectId, ref: 'Playlist'}
 });
 

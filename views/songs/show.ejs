@@ -20,12 +20,16 @@
   <form action="/songs/<%=oneSong._id%>?_method=DELETE" method="POST">
           <button class="delete-button">Delete Song</button>
         </form>
+<div class="head">
 
-    <p>Artist: <%= oneSong.artist %> </p>
-    <p>Song: <%= oneSong.song %> </p>
-    <p>Length: <%= oneSong.length %> </p>
-    <p>Writer: <%= oneSong.written_by %> </p>
-    <p>Lyrics: <%= oneSong.lyrics %> </p>
+
+    <h3>Artist: <%= oneSong.artist %> </h3>
+    <h3>Song: <%= oneSong.song %> </h3>
+    <h3>Length: <%= oneSong.length %> </h3>
+    <h3>Writer: <%= oneSong.written_by %> </h3>
+    </div>
+    <p class="lyrics">Lyrics: <%= oneSong.lyrics %> </p>
+
 
       <a href="/songs"><button tyoe="button" name="button">Back</a></button>
   </body>

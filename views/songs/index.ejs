@@ -20,33 +20,38 @@
 </ul>
 </nav>
 
-      <% for (let i = 0; i < song.length; i++) { %>
-        <div class="media">
-      <a href="/songs/<%= song[i].id %>/">
-      <table class="table table-striped">
-      <thead>
-      <tr>
 
-      <th>Artist</th>
 
-       <th>Song</th>
 
-       <th>Length</th>
+<table class="table table-striped">
+<thead>
+<tr>
 
-       <th>Writer</a></th>
-       </tr>
-       </thead>
-       <tbody>
-       <tr>
-       <td><%= song[i].artist %></td>
-       <td><%= song[i].song %></td>
-       <td><%= song[i].length %></td>
+<th>Artist</th>
+ <th>Song</th>
+ <th>Length</th>
+ <th>Writer</th>
+ <th>Producer</th>
+ </tr>
+ </thead>
+ <div class="media">
+ <tbody>
+   <% for (let i = 0; i < song.length; i++) { %>
 
-       </tbody>
-       </table>
-      </div>
+ <tr>
+ <td><a href="/songs/<%= song[i].id %>/"><%= song[i].artist %></td>
+ <td><a href="/songs/<%= song[i].id %>/"><%= song[i].song %></td>
+ <td><a href="/songs/<%= song[i].id %>/"><%= song[i].length %></td>
+ <td><a href="/songs/<%= song[i].id %>/"><%= song[i].written_by %></td>
+ <td><a href="/songs/<%= song[i].id %>/"><%= song[i].producer %></td>
+ <% } %>
+ </tbody>
+</div>
+ </table>
 
-    <% } %>
+
+
+
 
     <form action="/songs" method="post">
       Artist: <input name="artist" /><br/>

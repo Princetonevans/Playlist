@@ -16,9 +16,27 @@
     <img src='<%= onePlaylist.url %>' />
     <p>Submitted by: <%= onePlaylist.submitted_by %> </p>
 
-    <% for (let song of songs) { %>
-      <p><a href="/songs/<%=song.id%>"><strong><%= song.artist %></strong> - <%= song.song %></a></p>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+
+    <th>Artist</th>
+     <th>Song</th>
+     <th>Length</th>
+
+     </tr>
+     </thead>
+     <div class="media">
+     <tbody>
+       <% for (let i = 0; i < songs.length; i++) { %>
+         <tr>
+      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].artist %></td>
+      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].song %></td>
+      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].length %></td>
     <% } %>
+  </tbody>
+ </div>
+  </table>
 
     <h5>Add a song!</h5>
 
