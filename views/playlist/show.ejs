@@ -3,19 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-  </form>
+    <nav>
+  <ul class="nav nav-tabs">
+
+    <li><a href="/playlist">HOME</a></li>
+    <li><a href="/songs">SONGS</a></li>
+
+  </ul>
+</nav>
   <a href="/playlist/<%=onePlaylist.id%>/edit"><button type="button" name="button" class="edit-button">Edit Playlist</button></a>
   <form action="/playlist/<%=onePlaylist._id%>?_method=DELETE" method="POST">
           <button class="delete-button">Delete Playlist</button>
         </form>
     <img src='<%= onePlaylist.url %>' />
-    <p>Submitted by: <%= onePlaylist.submitted_by %> </p>
+    <div class="submit">
 
+
+    <p>Submitted by: <%= onePlaylist.submitted_by %> </p>
+</div>
     <table class="table table-striped">
     <thead>
     <tr>
@@ -23,7 +32,8 @@
     <th>Artist</th>
      <th>Song</th>
      <th>Length</th>
-
+      <th>Writer</th>
+       <th>Producer</th>
      </tr>
      </thead>
      <div class="media">
@@ -33,6 +43,8 @@
       <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].artist %></td>
       <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].song %></td>
       <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].length %></td>
+      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].written_by %></td>
+      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].producer %></td>
     <% } %>
   </tbody>
  </div>

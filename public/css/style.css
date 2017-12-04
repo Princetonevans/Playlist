@@ -26,4 +26,8 @@ h1 {
   margin: auto;
   padding: 5px;
   text-align: justify;
+  width: 600px;
+}
+.submit {
+  padding-top: 5px;
 }
