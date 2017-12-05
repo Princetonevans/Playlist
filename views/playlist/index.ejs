@@ -5,7 +5,7 @@
     <title></title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
       <header>
@@ -22,18 +22,50 @@
     </ul>
   </nav>
 
-
-
+<div id="playlist">
+<div class="d-flex flex-row">
       <% for (let i = 0; i < playlist.length; i++) { %>
-      <a href="/playlist/<%= playlist[i].id %>/"><img class="img-responsive center-inline" src="<%= playlist[i].url %>" height="200" width="200"/></a>
-    <% } %>
 
+      <a href="/playlist/<%= playlist[i].id %>/"><img src="<%= playlist[i].url %>" height="200" width="200"/></a>
+
+    <% } %>
+</div>
+</div>
+
+
+<%#
     <form action="/playlist" method="post">
       Url: <input name="url" /><br/>
       Submitted by: <input name="submitted_by" />
 
       <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>%>
+
+
+    <form>
+      <div class="newplay">
+      <div class="form-row align-items-center">
+        <div class="col-sm-3">
+          <label class="sr-only" for="inlineFormInputName">Url:</label>
+          <input name="url" type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Url">
+        </div>
+        <div class="col-sm-3">
+          <label class="sr-only" for="inlineFormInputGroupUsername">Submitted by:</label>
+          <div class="input-group mb-2 mb-sm-0">
+
+            <input name="submitted_by" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Name">
+          </div>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
     </form>
+
+
 
   </body>
 </html>

@@ -1,8 +1,8 @@
 /*body {
-  background: black;
+  background-image: url(https://i.ytimg.com/vi/XYEw0gcBtcQ/hqdefault.jpg);
   color: white;
-  text-align: center;
-}
+
+}*/
 
 .song {
   display: flex;
@@ -11,16 +11,16 @@
 h1 {
   text-align: center;
 
-}*/
+}
 .lyrics {
   width: 600px;
   /*text-align: center;*/
   margin: auto;
 }
-/*.media {
+.media {
   margin-left: 300px;
 
-}*/
+}
 .head {
   display:inline-block;
   margin: auto;
@@ -30,4 +30,21 @@ h1 {
 }
 .submit {
   padding-top: 5px;
+}
+
+.login {
+  text-align: center;
+}
+
+.remember {
+  margin-right: 300px;
+  padding-top: 5px;
+}
+#playlist {
+  margin: 10px 0 0 300px;
+  padding-left: 5px;
+}
+.newplay {
+  text-align: center;
+  margin-top: 10px;
 }
