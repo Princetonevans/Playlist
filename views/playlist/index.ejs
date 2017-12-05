@@ -10,10 +10,10 @@
   <body>
       <header>
         <% if (username) { %>
-          Welcome, <%= username %>.<a href="/user/logout"> Log out </a>
+        <h4 class="text">  Welcome, <%= username %>.<a href="/user/logout"> Log out </a></h4>
       <%  } %>
       </header>
-      <nav>
+      <nav class="homenav">
     <ul class="nav nav-tabs">
 
       <li><a href="/playlist">HOME</a></li>
@@ -21,13 +21,12 @@
 
     </ul>
   </nav>
-
+<div id="homepage">
 <div id="playlist">
 <div class="d-flex flex-row">
       <% for (let i = 0; i < playlist.length; i++) { %>
 
       <a href="/playlist/<%= playlist[i].id %>/"><img src="<%= playlist[i].url %>" height="200" width="200"/></a>
-
     <% } %>
 </div>
 </div>
@@ -43,27 +42,23 @@
     </form>%>
 
 
-    <form>
-      <div class="newplay">
-      <div class="form-row align-items-center">
-        <div class="col-sm-3">
-          <label class="sr-only" for="inlineFormInputName">Url:</label>
-          <input name="url" type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Url">
-        </div>
-        <div class="col-sm-3">
-          <label class="sr-only" for="inlineFormInputGroupUsername">Submitted by:</label>
-          <div class="input-group mb-2 mb-sm-0">
-
-            <input name="submitted_by" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Name">
-          </div>
-        </div>
-
-        <div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
+    <form class="home" action="/playlist" method="post">
+      <form>
+    <div class="form-group">
+      <label class="col-form-label" for="formGroupExampleInput">URL</label>
+      <input name="url" type="text" class="form-control" id="formGroupExampleInput" placeholder="URL">
     </div>
-    </form>
+    <div class="form-group" class="input-group mb-2 mb-sm-0">
+      <label class="col-form-label" for="formGroupExampleInput2">Submitted by</label>
+      <input name="submitted_by" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Submitted by">
+    </div>
+    <div class="btn">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+
+      </form>
+</div>
 
 
 
