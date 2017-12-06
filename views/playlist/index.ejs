@@ -8,11 +8,18 @@
 <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-      <header>
+    <div class="header text">
+
+
+<header>
+
+
         <% if (username) { %>
-        <h4 class="text">  Welcome, <%= username %>.<a href="/user/logout"> Log out </a></h4>
+        <h2>  Welcome, <%= username %>.</h2><h4><a href="/user/logout"> Log out </a></h4>
       <%  } %>
-      </header>
+</header>
+
+  </div>
       <nav class="homenav">
     <ul class="nav nav-tabs">
 
@@ -21,6 +28,7 @@
 
     </ul>
   </nav>
+  <div class="indexall"
 <div id="homepage">
 <div id="playlist">
 <div class="d-flex flex-row">
@@ -65,11 +73,124 @@
       </form>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Kendrick Lamar and J.Cole collaboration</h3>
+      <p>While fans may still be waiting on their ever-elusive joint album, Kendrick Lamar and J. Cole are set to reunite on wax very soon. Jeezy just revealed the full tracklist for his upcoming album Pressure, and it includes Cole and Kendrick together on a song titled “American Dream.” It’s set to be their first time appearing on the same track since 2013’s “Forbidden Fruit,” a cut off Cole’s sophomore album Born Sinner, although they did remix each others tracks in 2015 for their Black Friday release.</p>
 
+    </div>
+    <div class="col-sm-4">
+      <h3>Eminem reveals the full tracklist for Revival</h3>
+      <p>Eminem is gearing up for the release of his new album Revival on December 15, and he just revealed the project’s full tracklist. It’s set to include Ed Sheeran, Kehlani, P!nk, Alicia Keys, Skylar Grey, X Ambassadors, Beyoncé, and Brooklyn MC PHresher. It also puts to rest rumors that his Bey collab “Walk On Water” wouldn’t make the final cut of the album.The tracklist notably does not include 2 Chainz, who previously discussed working with Eminem on unreleased material.</p>
+
+    </div>
+    <div class="col-sm-4">
+      <h3>Drake loses # 1 spot on 2017 year-end Spotify list</h3>
+      <p>A new report published by Spotify shows Ed Sheeran has taken Drake’s former title of Most Streamed Artist, amassing 6.3 billion streams for 2017. Drake previously held the title in 2015 and 2016. Last year, Drizzy tallied 4.7 billion streams.
+
+Although Drake has been dethroned, the data shows Hip Hop listening has increased 74 percent since 2016. In fact, two of the Top 5 Most Streamed Artists fall in the Hip Hop category. Drake grabbed the second slot while Kendrick Lamar grabbed the fourth.</p>
+
+    </div>
+  </div>
+</div>
+
+
+<!--Footer-->
+<footer class="page-footer center-on-small-only unique-color-dark pt-0">
+
+    <div style="background-color: blue; width: 1100px;" >
+        <div class="container">
+            <!--Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+
+                <!--Grid column-->
+                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                    <h6 class="mb-0 white-text"></h6>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 col-lg-7 text-center text-md-right">
+                    <!--Facebook-->
+                    <a class="icons-sm fb-ic ml-0"><i class="fa fa-facebook white-text mr-lg-4"> </i></a>
+                    <!--Twitter-->
+                    <a class="icons-sm tw-ic"><i class="fa fa-twitter white-text mr-lg-4"> </i></a>
+                    <!--Google +-->
+                    <a class="icons-sm gplus-ic"><i class="fa fa-google-plus white-text mr-lg-4"> </i></a>
+                    <!--Linkedin-->
+                    <a class="icons-sm li-ic"><i class="fa fa-linkedin white-text mr-lg-4"> </i></a>
+                    <!--Instagram-->
+                    <a class="icons-sm ins-ic"><i class="fa fa-instagram white-text mr-lg-4"> </i></a>
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+        </div>
+    </div>
+
+    <!--Footer Links-->
+    <div class="container mt-5 mb-4 text-center text-md-left">
+        <div class="row mt-3">
+
+            <!--First column-->
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
+                <h6 class="title font-bold"><strong>Company name</strong></h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit.</p>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
+                <h6 class="title font-bold"><strong>Products</strong></h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p><a href="#!">Playlist</a></p>
+                <p><a href="#!">Blog</a></p>
+                <p><a href="#!">BrandFlow</a></p>
+                <p><a href="#!">Artist Development</a></p>
+            </div>
+            <!--/.Second column-->
+
+            <!--Third column-->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-r">
+                <h6 class="title font-bold"><strong>Useful links</strong></h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p><a href="#!">Your Account</a></p>
+                <p><a href="#!">Become an Affiliate</a></p>
+                <p><a href="#!">Blog</a></p>
+                <p><a href="#!">Help</a></p>
+            </div>
+            <!--/.Third column-->
+
+            <!--Fourth column-->
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h6 class="title font-bold"><strong>Contact</strong></h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p><i class="fa fa-home mr-3"></i> Houston, TX 77498, US</p>
+                <p><i class="fa fa-envelope mr-3"></i> info@PLAYLIST.com</p>
+                <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+            <!--/.Fourth column-->
+
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!-- Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: <a href="https://playlist-deploy.herokuapp.com/user/login"><strong> playlist-deploy.herokuapp.com/playlist</strong></a>
+        </div>
+    </div>
+    <!--/.Copyright -->
+
+</footer>
+<!--/.Footer-->
+</div>
   </body>
-  <footer class="footer">
-    <a href="#">Contact Us</a>
-    <a href="#">Learn More</a>
-    <a href="#">Privacy Policy</a>
-  </footer>
+
 </html>

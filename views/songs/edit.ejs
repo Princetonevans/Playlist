@@ -3,41 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1>Edit Song</h1>
+<h1 class="text1">Edit Song</h1>
+<div class="editsong">
+
 
               <form action="/songs/<%=song.id%>?_method=PUT" method="POST">
 
-                <label for="artist">Artist: </label>
+                <label class="text" for="artist">Artist: </label>
                 <input type="text" name="artist" value="<%=song.artist%>">
 
-                <label for="song">Song: </label>
+                <label class="text" for="song">Song: </label>
                 <input type="text" name="song" value="<%=song.song%>">
 
-                <label for="length">Length: </label>
+                <label class="text" for="length">Length: </label>
                 <input type="text" name="length" value="<%=song.length%>">
 
-                <label for="written_by">Writer: </label>
+                <label class="text" for="written_by">Writer: </label>
                 <input type="text" name="written_by" value="<%=song.written_by%>">
 
-                <label for="producer">Producer: </label>
+                <label class="text" for="producer">Producer: </label>
                 <input type="text" name="producer" value="<%=song.producer%>">
 
-                <label for="album">Album: </label>
+                <label class="text" for="album">Album: </label>
                 <input type="text" name="album" value="<%=song.album%>">
 
                 <div class="form-group">
-                <label for="lyrics">Lyrics: </label>
+                <label class="text" for="lyrics">Lyrics: </label>
                 <textarea type="text" name="lyrics" class="form-control" id="exampleTextarea" rows="3" value="<%=song.lyrics%>"></textarea>
 
                 </div>
+<div class="submit">
+
 
                 <input type="submit" name="submit" value="submit">
 
               </form>
               <a href="/songs"><button type="button" name="button">Back</a></button>
+</div>
+
+              </div>
   </body>
 </html>
