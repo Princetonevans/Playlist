@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: #1A1110;
 
 }
 /** {
@@ -61,11 +61,12 @@ h1 {
 }
 .navbar {
   display: flex;
-  padding: 3px;
-  margin: 5px;
+  margin: 3px;
+  /*margin: 5px;*/
 }
 .edit {
   padding-right: 5px;
+
 }
 #formGroupExampleInput, #formGroupExampleInput2 {
   width: 250px;
@@ -82,7 +83,7 @@ h1 {
   padding-left: 10px;
   padding-right: 10px;
   margin-left: 5px;
-  background-color: blue;
+  background-color: #2243B6;
   color: white;
 
 }
@@ -98,31 +99,30 @@ h1 {
 .text1 {
   color: white;
 }
+.textshow {
+  color: white;
+  margin-left: 6px;
+  text-align: left;
+  width: 500px;
+}
 .image {
   text-align: center;
-  width: 1050px;
+  width: 1100px;
   display: flex;
+  margin-top: 10px;
   /*padding-bottom: 15px;*/
   border: 2px solid white;
 }
-
-.addsong {
-  width: 260px;
-  height: 200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid white;
-  margin-left: 100px;
-  /*text-align: center;*/
-
-  /*border-radius: 10px;*/
+h5 {
+  margin-left: 60px;
 
 }
+
+/*song show ejs==================*/
 .playtable {
-  width: 700px;
-  margin: 3px 0 0 250px;
-  border: 2px solid white;
+  width: 800px;
+  margin: 3px 0 0 100px;
+  border-left: 2px solid white;
 
 }
 .homenav {
@@ -137,7 +137,7 @@ h1 {
 .playsub {
 display: flex;
 /*margin-top: 5px;*/
-width: 1050px;
+width: 1100px;
 border: 2px solid white;
 }
 .footer {
@@ -192,7 +192,7 @@ a {
   text-decoration: none;
 }
 .indexall {
-  margin: auto;
+  margin-left: 15px;
 }
 ul {
   display: flex;
@@ -205,3 +205,24 @@ ul {
 header {
   width: 500px;
 }
+ input {
+   margin-bottom: 5px;
+ }
+ .addsong {
+   width: 260px;
+   height: 200px;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-bottom: 15px;
+   /*border-bottom: 2px solid white;*/
+   margin-left: 100px;
+   /*text-align: center;*/
+
+   /*border-radius: 10px;*/
+
+ }
+ .border {
+   padding-bottom: 10px;
+   padding-top: 5px;
+   border-bottom: 1px solid white;
+ }
