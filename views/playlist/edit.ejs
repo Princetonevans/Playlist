@@ -10,8 +10,10 @@
               <form action="/playlist/<%=playlist.id%>?_method=PUT" method="POST">
                 <label for="url">url: </label>
                 <input type="text" name="url" value="<%=playlist.url%>">
-                <label for="submitted_by">Name: </label>
+                <label for="submitted_by">Submitted by: </label>
                 <input type="text" name="submitted_by" value="<%=playlist.submitted_by%>">
+                <label for="playlistName">Playlist Name: </label>
+                <input type="text" name="playlistName" value="<%=playlist.playlistName%>">
 
                 <input type="submit" name="submit" value="submit">
               </form>

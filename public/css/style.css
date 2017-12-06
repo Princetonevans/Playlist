@@ -113,7 +113,7 @@ h1 {
 .playtable {
   width: 700px;
   margin: 3px 0 0 250px;
-  border: 2px solid blue;
+  border: 2px solid white;
 
 }
 .homenav {
@@ -147,4 +147,9 @@ border: 2px solid white;
   width: 800px;
   border-radius: 15px;
   margin: 50px 0 0 200px;
+}
+.playtable1 {
+  border: 2px solid white;
+  width: 1000px;
+  margin-left: 10px;
 }
