@@ -18,6 +18,7 @@ h1 {
   background-color: yellow;
   color: black;
   margin: auto;
+
 }
 .media {
   /*margin-left: 300px;*/
@@ -162,14 +163,33 @@ border: 2px solid white;
 }
 .playtable1 {
   border: 2px solid white;
-  width: 1000px;
-  margin-left: 10px;
+  width: 1100px;
+  /*margin-left: 10px;*/
 }
 .editsong {
   width: 600px;
   margin: auto;
-  border: 3px solid white;
+  /*border: 3px solid black;*/
   background: blue;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+.editsong1 {
+  width: 350px;
+  height: 300px;
+  margin: auto;
+  /*border: 3px solid black;*/
+  background: blue;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  text-align: left;
+}
+.jumbotron {
+  background: white;
 }
 .container {
   border: 3px solid white;
