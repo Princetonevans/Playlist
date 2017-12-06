@@ -19,7 +19,7 @@ h1 {
   margin: auto;
 }
 .media {
-  margin-left: 300px;
+  /*margin-left: 300px;*/
 
 }
 .head {
@@ -44,9 +44,9 @@ h1 {
   padding-top: 5px;
 }
 #playlist {
-  margin-right: 1px;
-  padding-left: 5px;
-  width: 975px;
+  margin-left: 1px;
+  /*padding-left: 5px;*/
+  width: 820px;
   border: 3px solid white;
 }
 .newplay {
@@ -70,38 +70,81 @@ h1 {
 }
 .home {
   width: 280px;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 5px;
   height: 400px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-right: 10px;
+  margin-left: 10px;
   background-color: black;
   color: white;
 
 }
 #homepage {
   display: flex;
-  margin: 10px 0 2px 100px;
+  margin: auto;
 }
 
 .text {
   color: white;
+  width: 100px;
 }
 .image {
   text-align: center;
+  width: 1050px;
+  display: flex;
+  /*padding-bottom: 15px;*/
+  border: 2px solid white;
 }
 
 .addsong {
-  margin: 2px 5px 5px 5px;
+  width: 260px;
+  height: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid white;
+  margin-left: 100px;
+  /*text-align: center;*/
 
+  /*border-radius: 10px;*/
 
 }
 .playtable {
   width: 700px;
-  margin: auto;
+  margin: 3px 0 0 250px;
+  border: 2px solid blue;
+
 }
 .homenav {
-  border: 2px solid white;
+  border: 2px solid blue;
   background: white
+}
+.addasong {
+  height: 100px;
+
+}
+.playsub {
+display: flex;
+/*margin-top: 5px;*/
+width: 1050px;
+border: 2px solid white;
+}
+.footer {
+  position: fixed;
+  height: 100px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    display: block;
+}
+
+.jumbotron {
+  width: 800px;
+  border-radius: 15px;
+  margin: 50px 0 0 200px;
 }

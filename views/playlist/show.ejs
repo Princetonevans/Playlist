@@ -25,18 +25,37 @@
           <button class="delete-button">Delete Playlist</button>
         </form>
 </div>
+
+
 <div class="image">
 
-
     <img src='<%= onePlaylist.url %>' height="400" width="600" />
+
+
+
+<div class="addsong">
+    <form action='/songs' method='post'>
+      <h5 class="text">Add a song!</h5>
+      <input type='text' name='artist' placeholder='Artist' />
+      <input type='text' name='song' placeholder='Song' />
+      <input type='hidden' name='playlist' value='<%= onePlaylist._id %>' />
+      <input type='length' name='length' placeholder='Length' />
+      <input type='text' name='written_by' placeholder='Writer' />
+      <input type='text' name='producer' placeholder='Producer' />
+      <button type='submit'>Add Song</button>
+      <a href="/playlist"><button type="button" name="button">Back</a></button>
+</div>
 </div>
 
+<div class="playsub">
      <div class="submit text">
+<p>Submitted by: <%= onePlaylist.submitted_by %> </p>
+    </div>
 
 
-    <p class="addsong">Submitted by: <%= onePlaylist.submitted_by %> </p>
-</div>
+
 <div class="playtable">
+
     <table class="table table-striped">
 
     <thead>
@@ -44,11 +63,11 @@
 
 
 
-    <th class="text addsong">Artist</th>
-     <th class="text addsong">Song</th>
-     <th class="text addsong">Length</th>
-      <th class="text addsong">Writer</th>
-       <th class="text addsong">Producer</th>
+    <th class="text">Artist</th>
+     <th class="text">Song</th>
+     <th class="text">Length</th>
+      <th class="text">Writer</th>
+       <th class="text">Producer</th>
 
      </tr>
      </thead>
@@ -67,18 +86,8 @@
  </div>
   </table>
 </div>
-
-    <h5 class="text">Add a song!</h5>
-<div class="addsong">
-    <form action='/songs' method='post'>
-      <input type='text' name='artist' placeholder='Artist' />
-      <input type='text' name='song' placeholder='Song' />
-      <input type='hidden' name='playlist' value='<%= onePlaylist._id %>' />
-      <button type='submit'>Add Song</button>
-
-      <a href="/playlist"><button type="button" name="button">Back</a></button>
-
 </div>
+
 
   </body>
 </html>
