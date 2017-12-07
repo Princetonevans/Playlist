@@ -109,6 +109,9 @@ h1 {
 .text1 {
   color: white;
 }
+.text2 {
+  color: blue;
+}
 .textshow {
   color: white;
   margin-left: 6px;
@@ -204,7 +207,7 @@ border: 2px solid white;
   text-align: left;
 }
 .jumbotron {
-  background: white;
+  background: rgba(0,5,200, .8);
 }
 
 .header {
@@ -236,6 +239,10 @@ header {
  input {
    margin-bottom: 5px;
    text-align: center;
+   /*border-radius: 5px;*/
+ }
+ label {
+   border-radius: 5px;
  }
  .addsong {
    width: 500px;
@@ -264,6 +271,7 @@ header {
  .logplaylist {
    padding-bottom: 10px;
    margin-top: 20px;
+   background: white;
  }
  .container {
    border: 3px solid white;
@@ -277,4 +285,8 @@ header {
  }
  .fonts {
    font-family: 'Permanent Marker';
+ }
+ .signin {
+   width: 250px;
+   margin: auto;
  }
