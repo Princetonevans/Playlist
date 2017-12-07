@@ -1,10 +1,12 @@
 body {
-  background: #1A1110;
+  background: #1A1100;
 
 }
-/** {
-  border: 2px solid red;
-}*/
+* {
+  /*border: 2px solid red;*/
+  /*font-family: 'Permanent Marker';*/
+
+}
 .song {
   display: flex;
 }
@@ -21,6 +23,7 @@ h1 {
   border: 3px solid white;
   border-radius: 10px;
   padding: 8px;
+  font-family: 'Permanent Marker';
 
 }
 .media {
@@ -203,15 +206,7 @@ border: 2px solid white;
 .jumbotron {
   background: white;
 }
-.container {
-  border: 3px solid white;
-  padding-bottom: 5px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  width: 1100px;
-  margin-left: 0;
-  color: white;
-}
+
 .header {
   margin-left: 10px;
   display: inline-flex;
@@ -219,6 +214,7 @@ border: 2px solid white;
 }
 p, {
   color: white;
+  font-family: 'Caveat Brush', cursive;
 }
 a {
   text-decoration: none;
@@ -239,6 +235,7 @@ header {
 }
  input {
    margin-bottom: 5px;
+   text-align: center;
  }
  .addsong {
    width: 500px;
@@ -263,4 +260,21 @@ header {
  .editsubmit {
    margin-left: 90px;
    margin-top: 50px;
+ }
+ .logplaylist {
+   padding-bottom: 10px;
+   margin-top: 20px;
+ }
+ .container {
+   border: 3px solid white;
+   padding-bottom: 5px;
+   margin-top: 5px;
+   margin-bottom: 10px;
+   width: 1100px;
+   margin-left: 0;
+   color: white;
+   font-family: 'Karla', sans-serif;
+ }
+ .fonts {
+   font-family: 'Permanent Marker';
  }
