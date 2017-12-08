@@ -4,88 +4,83 @@
     <meta charset="utf-8">
     <title></title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Karla|Permanent+Marker" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Karla|Permanent+Marker" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
   </head>
   <body>
     <div class=" fonts header text">
 
-
-<header>
-
-
-        <% if (username) { %>
-        <h2>  Welcome, <%= username %>.</h2><h4><a href="/user/logout"> Log out </a></h4>
-      <%  } %>
-</header>
+        <header>
+          <% if (username) { %>
+          <h2>  Welcome, <%= username %>.</h2><h4><a href="/user/logout"> Log out </a></h4>
+        <%  } %>
+      </header>
 
   </div>
+
   <div class="fonts indexall">
       <nav class="homenav">
-    <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs">
+          <li><a href="/playlist">HOME</a></li>
+          <li><a href="/songs">SONGS</a></li>
+       </ul>
+    </nav>
 
-      <li><a href="/playlist">HOME</a></li>
-      <li><a href="/songs">SONGS</a></li>
+    <div id="homepage">
+        <div id="playlist">
+            <div class="d-flex flex-row">
+                  <% for (let i = 0; i < playlist.length; i++) { %>
 
-    </ul>
-  </nav>
-
-<div id="homepage">
-<div id="playlist">
-<div class="d-flex flex-row">
-      <% for (let i = 0; i < playlist.length; i++) { %>
-
-      <a href="/playlist/<%= playlist[i].id %>/"><img src="<%= playlist[i].url %>" height="200" width="199"/></a>
-    <% } %>
-</div>
-</div>
+                  <a href="/playlist/<%= playlist[i].id %>/"><img src="<%= playlist[i].url %>" height="200" width="199"/></a>
+                <% } %>
+            </div>
+        </div>
 
 
+      <form class="home" action="/playlist" method="post">
+          <form>
+        <div class="form-group">
+              <label class="col-form-label" for="formGroupExampleInput">URL</label>
+              <input name="url" type="text" class="form-control" id="formGroupExampleInput" placeholder="URL">
+        </div>
 
+        <div class="form-group" class="input-group mb-2 mb-sm-0">
+              <label class="col-form-label" for="formGroupExampleInput2">Submitted by</label>
+              <input name="submitted_by" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Submitted by">
+        </div>
 
-    <form class="home" action="/playlist" method="post">
-      <form>
-    <div class="form-group">
-      <label class="col-form-label" for="formGroupExampleInput">URL</label>
-      <input name="url" type="text" class="form-control" id="formGroupExampleInput" placeholder="URL">
-    </div>
-    <div class="form-group" class="input-group mb-2 mb-sm-0">
-      <label class="col-form-label" for="formGroupExampleInput2">Submitted by</label>
-      <input name="submitted_by" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Submitted by">
-    </div>
-    <div class="form-group" class="input-group mb-2 mb-sm-0">
-      <label class="col-form-label" for="formGroupExampleInput2">Playlist Name</label>
-      <input name="playlistName" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Playlist Name">
-    </div>
-    <div class="btn">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
+        <div class="form-group" class="input-group mb-2 mb-sm-0">
+              <label class="col-form-label" for="formGroupExampleInput2">Playlist Name</label>
+              <input name="playlistName" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Playlist Name">
+        </div>
 
-  </form>
-
-      </form>
+        <div class="btn">
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+    </form>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
       <h3>Kendrick Lamar and J.Cole collaboration</h3>
-      <p>While fans may still be waiting on their ever-elusive joint album, Kendrick Lamar and J. Cole are set to reunite on wax very soon. Jeezy just revealed the full tracklist for his upcoming album Pressure, and it includes Cole and Kendrick together on a song titled “American Dream.” It’s set to be their first time appearing on the same track since 2013’s “Forbidden Fruit,” a cut off Cole’s sophomore album Born Sinner, although they did remix each others tracks in 2015 for their Black Friday release.</p>
+         <p>While fans may still be waiting on their ever-elusive joint album, Kendrick Lamar and J. Cole are set to reunite on wax very soon. Jeezy just revealed the full tracklist for his upcoming album Pressure, and it includes Cole and Kendrick together on a song titled “American Dream.” It’s set to be their first time appearing on the same track since 2013’s “Forbidden Fruit,” a cut off Cole’s sophomore album Born Sinner, although they did remix each others tracks in 2015 for their Black Friday release.</p>
+</div>
 
-    </div>
-    <div class="col-sm-4">
+  <div class="col-sm-4">
       <h3>Eminem reveals the full tracklist for Revival</h3>
-      <p>Eminem is gearing up for the release of his new album Revival on December 15, and he just revealed the project’s full tracklist. It’s set to include Ed Sheeran, Kehlani, P!nk, Alicia Keys, Skylar Grey, X Ambassadors, Beyoncé, and Brooklyn MC PHresher. It also puts to rest rumors that his Bey collab “Walk On Water” wouldn’t make the final cut of the album.The tracklist notably does not include 2 Chainz, who previously discussed working with Eminem on unreleased material.</p>
+          <p>Eminem is gearing up for the release of his new album Revival on December 15, and he just revealed the project’s full tracklist. It’s set to include Ed Sheeran, Kehlani, P!nk, Alicia Keys, Skylar Grey, X Ambassadors, Beyoncé, and Brooklyn MC PHresher. It also puts to rest rumors that his Bey collab “Walk On Water” wouldn’t make the final cut of the album.The tracklist notably does not include 2 Chainz, who previously discussed working with Eminem on unreleased material.</p>
 
-    </div>
+</div>
     <div class="col-sm-4">
       <h3>Drake loses # 1 spot on 2017 year-end Spotify list</h3>
-      <p>A new report published by Spotify shows Ed Sheeran has taken Drake’s former title of Most Streamed Artist, amassing 6.3 billion streams for 2017. Drake previously held the title in 2015 and 2016. Last year, Drizzy tallied 4.7 billion streams.
+          <p>A new report published by Spotify shows Ed Sheeran has taken Drake’s former title of Most Streamed Artist, amassing 6.3 billion streams for 2017. Drake previously held the title in 2015 and 2016. Last year, Drizzy tallied 4.7 billion streams.
 
-Although Drake has been dethroned, the data shows Hip Hop listening has increased 74 percent since 2016. In fact, two of the Top 5 Most Streamed Artists fall in the Hip Hop category. Drake grabbed the second slot while Kendrick Lamar grabbed the fourth.</p>
+          Although Drake has been dethroned, the data shows Hip Hop listening has increased 74 percent since 2016. In fact, two of the Top 5 Most Streamed Artists fall in the Hip Hop category. Drake grabbed the second slot while Kendrick Lamar grabbed the fourth.</p>
 
     </div>
   </div>
@@ -180,12 +175,12 @@ Although Drake has been dethroned, the data shows Hip Hop listening has increase
         <div class="container-fluid text1">
             © 2017 Copyright: <a href="https://playlist-deploy.herokuapp.com/user/login"><strong> playlist-deploy.herokuapp.com/playlist</strong></a>
         </div>
-    </div>
-    <!--/.Copyright -->
+      </div>
+        <!--/.Copyright -->
 
-</footer>
-<!--/.Footer-->
-</div>
-  </body>
+      </footer>
+    <!--/.Footer-->
+  </div>
+</body>
 
 </html>

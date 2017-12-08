@@ -9,16 +9,13 @@
   </head>
   <body>
 
-    <div class="fonts jumbotron">
+      <div class="fonts jumbotron">
 
-<div class="text1">
+          <div class="text1">
+              <h1 class="text1">Edit Song</h1>
+          </div>
 
-
-<h1 class="text1">Edit Song</h1>
-</div>
-<div class="editsong">
-
-
+      <div class="editsong">
               <form action="/songs/<%=song.id%>?_method=PUT" method="POST">
 
                 <label class="text" for="artist">Artist: </label>
@@ -42,17 +39,15 @@
                 <div class="form-group">
                 <label class="text" for="lyrics">Lyrics: </label>
                 <textarea type="text" name="lyrics" class="form-control" id="exampleTextarea" rows="3" value="<%=song.lyrics%>"></textarea>
+          </div>
 
-                </div>
-<div class="submit">
-
-
+          <div class="submit">
                 <input type="submit" name="submit" value="submit">
-
-              </form>
-              <a href="/songs/<%=song.id%>"><button type="button" name="button">Nevermind</a></button>
-</div>
-</div>
-              </div>
+            </form>
+                <a href="/songs/<%=song.id%>"><button type="button" name="button">Nevermind</a></button>
+          </div>
+      </div>
+  </div>
+  
   </body>
 </html>

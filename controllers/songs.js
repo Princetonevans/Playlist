@@ -1,26 +1,27 @@
+//DEPENDENCIES================================
 const express = require('express');
 const router = express.Router();
 const methodOverride = require('method-override');
 router.use(methodOverride('_method'));
 
-//MODELS
+//MODELS==========================================
 const Playlist = require('../models/playlist.js');
 const Song = require('../models/songs.js');
 
 // INDEX ROUTE==============================================
 router.get('/', async (req, res) => {
-  const song = await Song.find();
+      const song = await Song.find();
 
-  if (req.session.logged) {
+      if (req.session.logged) {
 
-  res.render('songs/index.ejs', {
-    song: song,
-    username: req.session.username
-  });
-} else {
-  res.redirect('/user/login');
-}
-});
+          res.render('songs/index.ejs', {
+            song: song,
+            username: req.session.username
+              });
+            } else {
+          res.redirect('/user/login');
+        }
+    });
 
 // SHOW ROUTE================================================
 router.get('/:id', async (req, res) => {
@@ -35,15 +36,15 @@ router.get('/:id', async (req, res) => {
 
 //CREATE ROUTE================================
 router.post('/', async (req, res) => {
-  console.log('body data: ', req.body);
-  try {
-    const createdSong = await Song.create(req.body);
+      console.log('body data: ', req.body);
+      try {
+        const createdSong = await Song.create(req.body);
 
-    res.redirect('/playlist/' + createdSong.playlist);
-  } catch (err) {
-    res.send(err.message);
+        res.redirect('/playlist/' + createdSong.playlist);
+      } catch (err) {
+        res.send(err.message);
 
-  }
+    }
 });
 
 // EDIT ROUTE================================

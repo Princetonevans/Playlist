@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   </head>
+
   <body>
     <nav class=" fonts homenav">
-  <ul class="fonts nav nav-tabs">
 
-    <li><a href="/playlist">HOME</a></li>
-    <li><a href="/songs">SONGS</a></li>
+      <ul class="fonts nav nav-tabs">
+        <li><a href="/playlist">HOME</a></li>
+        <li><a href="/songs">SONGS</a></li>
+      </ul>
 
-  </ul>
-</nav>
-<div class="fonts navbar">
-  <div class=" fonts edit">
+    </nav>
 
+    <div class="fonts navbar">
 
-  <a  href="/playlist/<%=onePlaylist.id%>/edit"><button type="button" name="button" class="edit-button">Edit Playlist</button></a>
-  </div>
-  <form action="/playlist/<%=onePlaylist._id%>?_method=DELETE" method="POST">
+      <div class=" fonts edit">
+        <a  href="/playlist/<%=onePlaylist.id%>/edit"><button type="button" name="button" class="edit-button">Edit Playlist</button></a>
+      </div>
+
+      <form action="/playlist/<%=onePlaylist._id%>?_method=DELETE" method="POST">
           <button class="delete-button">Delete Playlist</button>
-        </form>
+      </form>
 </div>
 
 
@@ -32,68 +34,62 @@
 
     <img src='<%= onePlaylist.url %>' height="400" width="600" />
 
-
-
 <div class="fonts addsong">
     <form action='/songs' method='post'>
-      <h5 class="text">Add a song!</h5>
-      <input type='text' name='artist' placeholder='Artist' />
-      <input type='text' name='song' placeholder='Song' />
-      <input type='hidden' name='playlist' value='<%= onePlaylist._id %>' />
-      <input type='length' name='length' placeholder='Length' />
-      <input type='text' name='written_by' placeholder='Writer' />
-      <input type='text' name='producer' placeholder='Producer' />
+        <h5 class="text">Add a song!</h5>
+            <input type='text' name='artist' placeholder='Artist' />
+            <input type='text' name='song' placeholder='Song' />
+            <input type='hidden' name='playlist' value='<%= onePlaylist._id %>' />
+            <input type='length' name='length' placeholder='Length' />
+            <input type='text' name='written_by' placeholder='Writer' />
+            <input type='text' name='producer' placeholder='Producer' />
       <div class="border">
 
 
-      <button type='submit'>Add Song</button>
+            <button type='submit'>Add Song</button>
 
-      </div>
-</div>
+        </div>
+    </div>
 
 </div>
 
 <div class="fonts playsub">
      <div class="submit textshow">
-<h4>Playlist Name: <%= onePlaylist.playlistName %> </h4>
-<h4>Submitted by: <%= onePlaylist.submitted_by %> </h4>
+        <h4>Playlist Name: <%= onePlaylist.playlistName %> </h4>
+        <h4>Submitted by: <%= onePlaylist.submitted_by %> </h4>
 
-    </div>
+  </div>
 
 
 
 <div class="playtable">
 
-    <table class="table table-striped">
+  <table class="table table-striped">
 
-    <thead>
-    <tr>
-
-
-
-    <th class="text">Artist</th>
-     <th class="text">Song</th>
-     <th class="text">Length</th>
-      <th class="text">Writer</th>
-       <th class="text">Producer</th>
-
-     </tr>
+      <thead>
+        <tr>
+            <th class="text">Artist</th>
+             <th class="text">Song</th>
+             <th class="text">Length</th>
+              <th class="text">Writer</th>
+               <th class="text">Producer</th>
+        </tr>
      </thead>
 
-     <div class="media">
+ <div class="media">
      <tbody>
-       <% for (let i = 0; i < songs.length; i++) { %>
-         <tr>
-      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].artist %></td>
-      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].song %></td>
-      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].length %></td>
-      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].written_by %></td>
-      <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].producer %></td>
-    <% } %>
-  </tbody>
- </div>
-  </table>
-</div>
+                 <% for (let i = 0; i < songs.length; i++) { %>
+                   <tr>
+                <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].artist %></td>
+                <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].song %></td>
+                <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].length %></td>
+                <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].written_by %></td>
+                <td><a href="/songs/<%= songs[i].id %>/"><%= songs[i].producer %></td>
+              <% } %>
+          </tbody>
+        </div>
+      </table>
+   </div>
 </div>
 
 
