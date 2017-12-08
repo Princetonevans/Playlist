@@ -4,7 +4,7 @@ Playlist is a easy way to keep the songs you love organized. You can add, edit a
 ## Getting Started
 
 Start by signing in to your account or registering if you haven't signed up.
-[Register/Login](https://imgur.com/a/Nln40)
+![Register/Login](https://imgur.com/a/Nln40)
 
 
 Once you are signed in, you can check out some of the playlists made by the Playlist staff or create your own. You will need a playlist name and image to get started.
