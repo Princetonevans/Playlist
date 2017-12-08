@@ -16,14 +16,14 @@ h1 {
 
 }
 .lyrics {
-  width: 600px;
+  width: 800px;
   background-color: blue;
   color: white;
   margin: auto;
   border: 3px solid white;
   border-radius: 10px;
   padding: 8px;
-  font-family: 'Permanent Marker';
+  font-family: 'Caveat Brush';
 
 }
 .media {
@@ -178,6 +178,7 @@ border: 2px solid white;
   width: 800px;
   border-radius: 15px;
   margin: 50px 0 0 200px;
+  background: rgba(0,5,190, .9);
 }
 .playtable1 {
   border: 2px solid white;
@@ -193,9 +194,10 @@ border: 2px solid white;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 10px;
+
 }
 .editsong1 {
-  width: 350px;
+  width: 320px;
   height: 200px;
   margin: auto;
   /*border: 3px solid black;*/
@@ -205,9 +207,14 @@ border: 2px solid white;
   padding-bottom: 10px;
   border-radius: 10px;
   text-align: left;
+
 }
 .jumbotron {
   background: rgba(0,5,190, .9);
+  width: 800px;
+  border-radius: 15px;
+  margin: 50px 0 0 200px;
+  border: 2px solid white;
 }
 
 .header {
@@ -284,6 +291,9 @@ header {
    font-family: 'Karla', sans-serif;
  }
  .fonts {
+   font-family: 'Caveat Brush';
+ }
+ .fonts1 {
    font-family: 'Permanent Marker';
  }
  .signin {
