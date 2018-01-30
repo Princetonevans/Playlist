@@ -34,7 +34,7 @@ Delete playlist
 ```
 
 ## Deployment
-I used Heroku to deploy my application. You can view it live at ![Playlist](https://playlist-deploy.herokuapp.com)
+I used Heroku to deploy my application. You can view it live at (https://playlist-deploy.herokuapp.com)
 
 ## Updates
 It seems silly to have a playlist that doesn't play music. I would like to add music to the application so that when you click on a song, you can listen to that song.
